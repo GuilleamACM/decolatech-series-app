@@ -1,4 +1,4 @@
-﻿namespace Series.Enum
+﻿namespace Series.Enums
 {
     public enum Genre
     {
@@ -14,6 +14,6 @@
         SciFi = 10,
         Spy = 11,
         Thriller = 12,
-        Western = 13,
+        Western = 13
     }
 }

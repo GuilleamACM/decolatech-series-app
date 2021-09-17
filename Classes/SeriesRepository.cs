@@ -3,38 +3,38 @@ using Series.Interfaces;
 
 namespace Series.Classes
 {
-    public class SeriesRepository : IRepository<Series>
+    public class SeriesRepository : IRepository<TvSeries>
     {
-        private List<Series> m_seriesList = new List<Series>();
+        private List<TvSeries> _seriesList = new List<TvSeries>();
             
-        public List<Series> List()
+        public List<TvSeries> List()
         {
-            return m_seriesList;
+            return _seriesList;
         }
 
-        public Series GetById(int id)
+        public TvSeries GetById(int id)
         {
-            return m_seriesList[id];
+            return _seriesList[id];
         }
 
-        public void Insert(Series entity)
+        public void Insert(TvSeries entity)
         {
-            m_seriesList.Add(entity);
+            _seriesList.Add(entity);
         }
 
         public void Remove(int id)
         {
-            m_seriesList[id].Delete();
+            _seriesList[id].Delete();
         }
 
-        public void Update(int id, Series entity)
+        public void Update(int id, TvSeries entity)
         {
-            m_seriesList[id] = entity;
+            _seriesList[id] = entity;
         }
 
         public int NextId()
         {
-            return m_seriesList.Count;
+            return _seriesList.Count;
         }
     }
 }

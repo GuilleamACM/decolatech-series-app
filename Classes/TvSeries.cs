@@ -1,9 +1,9 @@
 ﻿using System;
-using Series.Enum;
+using Series.Enums;
 
 namespace Series.Classes
 {
-    public class Series : BaseEntity
+    public class TvSeries : BaseEntity
     {
         public Genre Genre { get; private set; }
         public string Title { get; private set; }
@@ -11,7 +11,7 @@ namespace Series.Classes
         public string Description { get; private set; }
         public bool Deleted { get; private set; }
 
-        public Series(int id, Genre genre, string title, string description, int year)
+        public TvSeries(int id, Genre genre, string title, string description, int year)
         {
             this.Id = id;
             this.Genre = genre;
@@ -25,15 +25,15 @@ namespace Series.Classes
         {
             var result = "";
             result += "Gênero: " + this.Genre + Environment.NewLine;
-            result += "Título " + this.Title + Environment.NewLine;
-            result += "Descrição " + this.Description + Environment.NewLine;
-            result += "Ano de Lançamento " + this.Year + Environment.NewLine;
+            result += "Título: " + this.Title + Environment.NewLine;
+            result += "Descrição: " + this.Description + Environment.NewLine;
+            result += "Ano de Lançamento: " + this.Year + Environment.NewLine;
             return result;
         }
 
         public void Delete()
         {
-            this.Deleted = false;
+            this.Deleted = true;
         }
     }
 }
